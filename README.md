@@ -91,6 +91,7 @@ cd web && npm run build
 ## 作者
 
 [@fuzqing](https://github.com/fuzqing)
+[@Gemini](https://gemini.google.com/app)
 
 ## 许可证
 
