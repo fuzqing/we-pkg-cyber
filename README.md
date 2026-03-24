@@ -1,6 +1,6 @@
-# WE_PKG_CYBER
+# WE PKG CYBER
 
-一款基于 WebAssembly 的浏览器端游戏资产解包/打包工具，专为 WE 系列游戏 MOD 开发设计。
+一款基于 WebAssembly 的浏览器端 Wallpaper Engine 资产解包/打包工具。
 
 ![Vue](https://img.shields.io/badge/Vue-3.5-4FC08D?logo=vue.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript)
@@ -13,7 +13,6 @@
 - **资产解包** - 提取 scene.pkg 中的音频、图像、配置等资源
 - **资产打包** - 将修改后的资源重新打包为 scene.pkg
 - **WASM 加速** - 使用 Go + WebAssembly 实现高性能二进制处理
-- **赛博朋克 UI** - 工业级终端风格的用户界面
 
 ## 技术栈
 
@@ -90,7 +89,8 @@ cd web && npm run build
 
 ## 作者
 
-[@fuzqing](https://github.com/fuzqing)
+[@Vito Wong](https://github.com/fuzqing)
+
 [@Gemini](https://gemini.google.com/app)
 
 ## 许可证
