@@ -14,6 +14,20 @@
 - **资产打包** - 将修改后的资源重新打包为 scene.pkg
 - **WASM 加速** - 使用 Go + WebAssembly 实现高性能二进制处理
 
+## 工作流 (Workflow)
+
+```mermaid
+graph LR
+    A[.pkg 文件] --> B[Wasm 解包引擎]
+    B --> C[浏览器内存/ZIP]
+    C --> D{用户修改资产}
+    D --> E[浏览器内存/ZIP]
+    E --> F[Wasm 打包引擎]
+    F --> G[新 .pkg 文件]
+    style B fill:#00ffff,stroke:#333,stroke-width:2px
+    style F fill:#ff00ff,stroke:#333,stroke-width:2px
+```
+
 ## 技术栈
 
 - **前端**: Vue 3 + TypeScript + Vite
@@ -86,6 +100,14 @@ cd web && npm run build
     └── public/
         └── main.wasm     # 编译后的 WASM 模块
 ```
+
+## 鸣谢 (Credits)
+
+本项目受到了以下开源项目的启发与底层逻辑支持：
+
+* [redpfire/we](https://github.com/redpfire/we) - 本项目核心解包/打包逻辑的 C++ 原始实现。感谢原作者对 `.pkg` 格式研究的贡献。
+* [JSZip](https://stuk.github.io/jszip/) - 提供强大的浏览器端压缩支持。
+* [Go WebAssembly](https://go.dev/wiki/) - 让高性能二进制处理走进浏览器。
 
 ## 作者
 
